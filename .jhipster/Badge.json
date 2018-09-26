@@ -1,0 +1,49 @@
+{
+    "name": "Badge",
+    "fields": [
+        {
+            "fieldName": "tag",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 36
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "IdentificationType",
+            "fieldValues": "APP,URL,SYSTEM"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "badgeEvent",
+            "otherEntityName": "badgeEvent",
+            "otherEntityRelationshipName": "badge"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "history",
+            "otherEntityName": "history",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "badge"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "person",
+            "otherEntityName": "person",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180926144855",
+    "entityTableName": "badge",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

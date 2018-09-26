@@ -38,6 +38,14 @@ public class CacheConfiguration {
             cm.createCache(io.comego.application.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(io.comego.application.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(io.comego.application.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(io.comego.application.domain.Person.class.getName(), jcacheConfiguration);
+            cm.createCache(io.comego.application.domain.Person.class.getName() + ".badges", jcacheConfiguration);
+            cm.createCache(io.comego.application.domain.Person.class.getName() + ".histories", jcacheConfiguration);
+            cm.createCache(io.comego.application.domain.Badge.class.getName(), jcacheConfiguration);
+            cm.createCache(io.comego.application.domain.Badge.class.getName() + ".badgeEvents", jcacheConfiguration);
+            cm.createCache(io.comego.application.domain.BadgeEvent.class.getName(), jcacheConfiguration);
+            cm.createCache(io.comego.application.domain.AdjustmentSchema.class.getName(), jcacheConfiguration);
+            cm.createCache(io.comego.application.domain.History.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

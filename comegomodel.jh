@@ -1,0 +1,46 @@
+entity Person {
+	userName String required maxlength(100)
+    email String required
+}
+entity Badge {
+	tag String required maxlength(36)
+    type IdentificationType
+}
+
+entity BadgeEvent {
+	occurance Instant
+}
+
+entity AdjustmentSchema {
+	name String required maxlength(100)
+    key String required maxlength(36) //DMN-Key
+    validFrom Instant
+    active Boolean
+}
+
+entity History {
+	actualDate LocalDate
+	startEvent Instant
+    endEvent Instant
+    grossHours Float
+    deductionHours Float
+    additionHours Float
+    netHours Float
+}
+
+enum IdentificationType {
+	APP, URL, SYSTEM
+}
+
+relationship OneToMany {
+	Person to Badge
+    Badge to BadgeEvent
+    Person to History
+}
+
+relationship OneToOne {
+	Person to AdjustmentSchema
+    History to Badge
+}
+
+service BadgeEvent with serviceImpl

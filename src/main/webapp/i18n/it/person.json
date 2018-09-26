@@ -1,0 +1,26 @@
+
+{
+    "comeGoApp": {
+        "person" : {
+            "home": {
+                "title": "People",
+                "createLabel": "Genera un nuovo Person",
+                "createOrEditLabel": "Genera o modifica un Person"
+            },
+            "created": "&Egrave; stato generato un nuovo Person con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Person identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Person con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Person {{ id }}?"
+            },
+            "detail": {
+                "title": "Person"
+            },
+            "userName": "User Name",
+            "email": "Email",
+            "adjustmentSchema": "Adjustment Schema",
+            "badge": "Badge",
+            "history": "History"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "comeGoApp": {
+        "IdentificationType" : {
+            "null": "",
+            "APP": "APP",
+            "URL": "URL",
+            "SYSTEM": "SYSTEM"
+        }
+    }
+}

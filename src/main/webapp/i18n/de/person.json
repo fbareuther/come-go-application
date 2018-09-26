@@ -1,0 +1,26 @@
+
+{
+    "comeGoApp": {
+        "person" : {
+            "home": {
+                "title": "People",
+                "createLabel": "Person erstellen",
+                "createOrEditLabel": "Person erstellen oder bearbeiten"
+            },
+            "created": "Person erstellt mit ID {{ param }}",
+            "updated": "Person aktualisiert mit ID {{ param }}",
+            "deleted": "Person gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Person {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Person"
+            },
+            "userName": "User Name",
+            "email": "Email",
+            "adjustmentSchema": "Adjustment Schema",
+            "badge": "Badge",
+            "history": "History"
+        }
+    }
+}

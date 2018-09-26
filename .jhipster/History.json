@@ -1,0 +1,58 @@
+{
+    "name": "History",
+    "fields": [
+        {
+            "fieldName": "actualDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "startEvent",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "endEvent",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "grossHours",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "deductionHours",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "additionHours",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "netHours",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "badge",
+            "otherEntityName": "badge",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "history"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "person",
+            "otherEntityName": "person",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180926144858",
+    "entityTableName": "history",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

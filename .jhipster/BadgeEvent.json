@@ -1,0 +1,26 @@
+{
+    "name": "BadgeEvent",
+    "fields": [
+        {
+            "fieldName": "occurance",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "badge",
+            "otherEntityName": "badge",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180926144856",
+    "entityTableName": "badge_event",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

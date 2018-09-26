@@ -1,0 +1,26 @@
+
+{
+    "comeGoApp": {
+        "badge" : {
+            "home": {
+                "title": "Badges",
+                "createLabel": "Badge erstellen",
+                "createOrEditLabel": "Badge erstellen oder bearbeiten"
+            },
+            "created": "Badge erstellt mit ID {{ param }}",
+            "updated": "Badge aktualisiert mit ID {{ param }}",
+            "deleted": "Badge gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Badge {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Badge"
+            },
+            "tag": "Tag",
+            "type": "Type",
+            "badgeEvent": "Badge Event",
+            "history": "History",
+            "person": "Person"
+        }
+    }
+}
