@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="badge">
+            <h2><span jhiTranslate="comeGoApp.badge.detail.title">Badge</span> {{badge.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="comeGoApp.badge.tag">Tag</span></dt>
+                <dd>
+                    <span>{{badge.tag}}</span>
+                </dd>
+                <dt><span jhiTranslate="comeGoApp.badge.type">Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'comeGoApp.IdentificationType.' + badge.type}}">{{badge.type}}</span>
+                </dd>
+                <dt><span jhiTranslate="comeGoApp.badge.person">Person</span></dt>
+                <dd>
+                    <div *ngIf="badge.person">
+                        <a [routerLink]="['/person', badge.person?.id, 'view']">{{badge.person?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/badge', badge.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

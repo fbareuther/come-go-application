@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="history">
+            <h2><span jhiTranslate="comeGoApp.history.detail.title">History</span> {{history.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="comeGoApp.history.actualDate">Actual Date</span></dt>
+                <dd>
+                    <span>{{history.actualDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="comeGoApp.history.startEvent">Start Event</span></dt>
+                <dd>
+                    <span>{{history.startEvent}}</span>
+                </dd>
+                <dt><span jhiTranslate="comeGoApp.history.endEvent">End Event</span></dt>
+                <dd>
+                    <span>{{history.endEvent}}</span>
+                </dd>
+                <dt><span jhiTranslate="comeGoApp.history.grossHours">Gross Hours</span></dt>
+                <dd>
+                    <span>{{history.grossHours}}</span>
+                </dd>
+                <dt><span jhiTranslate="comeGoApp.history.deductionHours">Deduction Hours</span></dt>
+                <dd>
+                    <span>{{history.deductionHours}}</span>
+                </dd>
+                <dt><span jhiTranslate="comeGoApp.history.additionHours">Addition Hours</span></dt>
+                <dd>
+                    <span>{{history.additionHours}}</span>
+                </dd>
+                <dt><span jhiTranslate="comeGoApp.history.netHours">Net Hours</span></dt>
+                <dd>
+                    <span>{{history.netHours}}</span>
+                </dd>
+                <dt><span jhiTranslate="comeGoApp.history.badge">Badge</span></dt>
+                <dd>
+                    <div *ngIf="history.badge">
+                        <a [routerLink]="['/badge', history.badge?.id, 'view']">{{history.badge?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="comeGoApp.history.person">Person</span></dt>
+                <dd>
+                    <div *ngIf="history.person">
+                        <a [routerLink]="['/person', history.person?.id, 'view']">{{history.person?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/history', history.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

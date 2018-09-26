@@ -1,0 +1,82 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-history-heading" jhiTranslate="comeGoApp.history.home.createOrEditLabel">Create or edit a History</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!history.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="history.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="comeGoApp.history.actualDate" for="field_actualDate">Actual Date</label>
+                    <div class="input-group">
+                        <input id="field_actualDate" type="text" class="form-control" name="actualDate" ngbDatepicker  #actualDateDp="ngbDatepicker" [(ngModel)]="history.actualDate"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="actualDateDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="comeGoApp.history.startEvent" for="field_startEvent">Start Event</label>
+                    <div class="d-flex">
+                        <input id="field_startEvent" type="datetime-local" class="form-control" name="startEvent" [(ngModel)]="startEvent"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="comeGoApp.history.endEvent" for="field_endEvent">End Event</label>
+                    <div class="d-flex">
+                        <input id="field_endEvent" type="datetime-local" class="form-control" name="endEvent" [(ngModel)]="endEvent"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="comeGoApp.history.grossHours" for="field_grossHours">Gross Hours</label>
+                    <input type="number" class="form-control" name="grossHours" id="field_grossHours"
+                        [(ngModel)]="history.grossHours" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="comeGoApp.history.deductionHours" for="field_deductionHours">Deduction Hours</label>
+                    <input type="number" class="form-control" name="deductionHours" id="field_deductionHours"
+                        [(ngModel)]="history.deductionHours" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="comeGoApp.history.additionHours" for="field_additionHours">Addition Hours</label>
+                    <input type="number" class="form-control" name="additionHours" id="field_additionHours"
+                        [(ngModel)]="history.additionHours" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="comeGoApp.history.netHours" for="field_netHours">Net Hours</label>
+                    <input type="number" class="form-control" name="netHours" id="field_netHours"
+                        [(ngModel)]="history.netHours" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="comeGoApp.history.badge" for="field_badge">Badge</label>
+                    <select class="form-control" id="field_badge" name="badge" [(ngModel)]="history.badge">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="badgeOption.id === history.badge?.id ? history.badge : badgeOption" *ngFor="let badgeOption of badges; trackBy: trackBadgeById">{{badgeOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="comeGoApp.history.person" for="field_person">Person</label>
+                    <select class="form-control" id="field_person" name="person" [(ngModel)]="history.person" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="personOption.id === history.person?.id ? history.person : personOption" *ngFor="let personOption of people; trackBy: trackPersonById">{{personOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+
+{
+    "comeGoApp": {
+        "badge" : {
+            "home": {
+                "title": "Badges",
+                "createLabel": "Genera un nuovo Badge",
+                "createOrEditLabel": "Genera o modifica un Badge"
+            },
+            "created": "&Egrave; stato generato un nuovo Badge con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Badge identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Badge con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Badge {{ id }}?"
+            },
+            "detail": {
+                "title": "Badge"
+            },
+            "tag": "Tag",
+            "type": "Type",
+            "badgeEvent": "Badge Event",
+            "history": "History",
+            "person": "Person"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+
+{
+    "comeGoApp": {
+        "history" : {
+            "home": {
+                "title": "Histories",
+                "createLabel": "Genera un nuovo History",
+                "createOrEditLabel": "Genera o modifica un History"
+            },
+            "created": "&Egrave; stato generato un nuovo History con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato History identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato History con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare History {{ id }}?"
+            },
+            "detail": {
+                "title": "History"
+            },
+            "actualDate": "Actual Date",
+            "startEvent": "Start Event",
+            "endEvent": "End Event",
+            "grossHours": "Gross Hours",
+            "deductionHours": "Deduction Hours",
+            "additionHours": "Addition Hours",
+            "netHours": "Net Hours",
+            "badge": "Badge",
+            "person": "Person"
+        }
+    }
+}

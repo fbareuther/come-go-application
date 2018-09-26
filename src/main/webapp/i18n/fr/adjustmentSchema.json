@@ -1,0 +1,26 @@
+
+{
+    "comeGoApp": {
+        "adjustmentSchema" : {
+            "home": {
+                "title": "AdjustmentSchemas",
+                "createLabel": "Créer un nouveau Adjustment Schema",
+                "createOrEditLabel": "Créer ou éditer un Adjustment Schema"
+            },
+            "created": "Un nouveau Adjustment Schema a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Adjustment Schema avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Adjustment Schema avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Adjustment Schema {{ id }} ?"
+            },
+            "detail": {
+                "title": "Adjustment Schema"
+            },
+            "name": "Name",
+            "key": "Key",
+            "validFrom": "Valid From",
+            "active": "Active",
+            "person": "Person"
+        }
+    }
+}

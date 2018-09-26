@@ -1,0 +1,23 @@
+
+{
+    "comeGoApp": {
+        "badgeEvent" : {
+            "home": {
+                "title": "BadgeEvents",
+                "createLabel": "Créer un nouveau Badge Event",
+                "createOrEditLabel": "Créer ou éditer un Badge Event"
+            },
+            "created": "Un nouveau Badge Event a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Badge Event avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Badge Event avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Badge Event {{ id }} ?"
+            },
+            "detail": {
+                "title": "Badge Event"
+            },
+            "occurance": "Occurance",
+            "badge": "Badge"
+        }
+    }
+}
